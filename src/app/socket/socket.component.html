@@ -1,0 +1,41 @@
+
+<div class="container">
+  <header class="jumbotron">
+  <p>{{ content }}</p>
+  </header>
+  </div>
+  
+  <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="assets/img/saat.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Antika Saat</h5>
+          <p class="card-text">Antika saat için teklif ver.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="assets/img/kumsaati.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Tablo</h5>
+          <p class="card-text">Kum saati için teklif ver.</p>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img class="card-img-top" src="assets/img/vazo.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Antika Vazo</h5>
+          <p class="card-text">Antika vazo için teklif ver.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="messagecontent" role="main">
+      <input class="form-control" type="text" placeholder="Teklif" [(ngModel)]="input">
+      <button class="btn btn-success" (click)="sendMessage()">Gönder</button>
+      <div class="messagecontent">
+        <div *ngFor="let msg of messageService.msg">
+         kslajdlskadjsal
+        </div>
+      </div>
+    </div>

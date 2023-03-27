@@ -1,0 +1,44 @@
+<div id="app">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+<a href="#" class="navbar-brand" style="margin-left: 10px;">Açık Artırma Projesi</a>
+<ul class="navbar-nav mr-auto" routerLinkActive="active">
+<li class="nav-item">
+<a href="/home" class="nav-link" routerLink="home">Ana Sayfa </a>
+</li>
+<li class="nav-item">
+    <a href="/socket" class="nav-link" routerLink="socket">Açık Artırma Paneli </a>
+    </li>
+<li class="nav-item" *ngIf="showAdminBoard">
+<a href="/admin" class="nav-link" routerLink="admin">Admin Paneli</a>
+</li>
+<li class="nav-item" *ngIf="showModeratorBoard">
+<a href="/mod" class="nav-link" routerLink="mod">Moderator Paneli</a>
+</li>
+<li class="nav-item">
+<a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">Kullanıcı Paneli</a>
+</li>
+</ul>
+
+<ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+<li class="nav-item">
+<a href="/register" class="nav-link up btn btn-outline-info" routerLink="register" style="width: 155%;">Kayıt ol</a>
+</li>
+<li class="nav-item">
+<a href="/login" class="nav-link in btn btn-outline-secondary" routerLink="login" style="width: 200%;">Giriş</a>
+</li>
+</ul>
+
+<ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+<li class="nav-item">
+<a href="/profile" class="nav-link" routerLink="profile" style="position: fixed; margin-left: 790px; width: 110px; ">{{ username }}</a>
+</li>
+<li class="nav-item">
+<a href class="nav-link" style="width: 160%; margin-left: 1290%;" (click)="logout()">Çıkış Yap</a>
+</li>
+</ul>
+</nav>
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>
+</div>
