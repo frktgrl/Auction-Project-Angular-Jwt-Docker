@@ -1,13 +1,5 @@
 # Proje Özellikleri
 
-## Kod deposuna, içeriğe ulaşmak için kullandığım registrationKey 
-
-{"type":"REGISTER",
-"name":"faruk",
-"surname":"tugrul",
-"email":"faruk1154@hotmail.com",
-"registrationKey":"14ed892cbce37c96c63459503001f4cde646953d21b141880199288f49d9be41"}
-
 ## Projeyi çalıştırmak için
 
 * Proje git clone komutu ile bilgisayara indirilmelidir.
